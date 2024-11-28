@@ -115,7 +115,7 @@ const FinanceChart = () => {
             stroke="#FAE27C"
             strokeWidth={5}
           />
-          <Line type="monotone" dataKey="expence" stroke="#C3EDFA" />
+          <Line type="monotone" dataKey="expence" stroke="#C3EDFA" strokeWidth={5}/>
         </LineChart>
       </ResponsiveContainer>
     </div>
