@@ -1,7 +1,7 @@
 import Pagination from '@/components/Pagination'
 import Table from '@/components/Table'
 import TableSearch from '@/components/TableSearch'
-import { role, teachersData } from '@/lib/data'
+import { role, studentsData, teachersData } from '@/lib/data'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -53,7 +53,7 @@ const columns = [
   },
 ]
 
-const TeacherListPage = () => {
+const StudentListPage = () => {
   
 
 
@@ -89,7 +89,7 @@ const TeacherListPage = () => {
     <div className='bg-white p-4 rounded-md flex-1 m-4 mt-0'>
       {/* TOP  */}
       <div className="flex items-center justify-between">
-        <h1 className='hidden md:block text-lg font-semibold'>All Teachers</h1>
+        <h1 className='hidden md:block text-lg font-semibold'>All Students</h1>
         <div className="flex flex-col md:flex-row items-center gap-4 w-full md:w-auto">
           <TableSearch />
           <div className="flex items-center gap-4 self-end">
@@ -106,7 +106,7 @@ const TeacherListPage = () => {
         </div>
       </div>
       {/* LIST  */}
-      <Table columns={columns} renderRaw={renderRaw} data={teachersData}/>
+      <Table columns={columns} renderRaw={renderRaw} data={studentsData}/>
       {/* PAGINATION  */}
       <div className="">
         <Pagination />
@@ -115,4 +115,4 @@ const TeacherListPage = () => {
   )
 }
 
-export default TeacherListPage
+export default StudentListPage
